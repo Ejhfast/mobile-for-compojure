@@ -1,15 +1,9 @@
-# test-compojure
-
-FIXME: write description
+This is a small library for creating middleware to handle mobile browsers in compojure applications.
 
 ## Usage
 
-FIXME: write
+TBD
 
 ## Installation
 
-FIXME: write
-
-## License
-
-FIXME: write
+Leningen!
