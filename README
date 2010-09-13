@@ -2,8 +2,25 @@ This is a small library for creating middleware to handle mobile browsers in com
 
 ## Usage
 
-TBD
+To run the example application:
+
+lein dpes
+lein repl src/mobile/example.clj
+
+To apply the middleware to your own application:
+
+First define the function that will transform your response, if a mobile device is detected
+(defn myfunc ...)
+
+Then apply the middleware:
+
+(wrap! name_of_your_app
+       ((handle-mobile myfunc)))
+
+That's it!
 
 ## Installation
 
-Leningen!
+Get leiningen
+Download this repo
+Run 'lein deps'

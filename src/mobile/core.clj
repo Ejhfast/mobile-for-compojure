@@ -17,7 +17,14 @@
   (let [user-agent (get-user-agent request)]
     (if (re-seq mobile-regex (str2/lower-case user-agent)) true false)))
 
-(def devices (re-pattern "iphone|android"))
+(def devices (re-pattern
+              (str
+               "palm|blackberry|nokia|phone|midp|mobi|symbian|chtml|ericsson|minimo|"
+               "audiovox|motorola|samsung|telit|upg1|windows ce|ucweb|astel|plucker|"
+               "x320|x240|j2me|sgh|portable|sprint|docomo|kddi|softbank|android|mmp|"
+               "pdxgw|netfront|xiino|vodafone|portalmmm|sagem|mot-|sie-|ipod|up\\.b|"
+               "webos|amoi|novarra|cdm|alcatel|pocket|ipad|iphone|mobileexplorer|"
+               "mobile")))
 
 (defn handle-mobile [your-func]
   (fn
